@@ -1,0 +1,284 @@
+﻿========== REPOSITORY INSPECTION ==========
+
+========== LOCATION ==========
+
+Path                             
+----                             
+C:\Users\ragha\IdeaProjects\Intro
+
+
+
+
+========== GIT STATUS ==========
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	repository-inspection.txt
+	src/main/java/HybridInheritance.java
+	src/main/java/abes1.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+========== ALL COMMIT HISTORY ==========
+*   7fbedb1 (HEAD -> main) Merge branch 'main' of https://github.com/raghavendrashivam474/IdeaProjects
+|\  
+| * e2cd8a7 (origin/main, origin/HEAD) Add README for IdeaProjects
+* | d8775ba Inheritance application basics
+|/  
+* 6477759 Initializing countdown timer
+* 6977370 Recursion intro and a simple program of finding sum upto n natural numbers
+* 8ee4cf2 Methods , declaration and calling then method overloading
+* b44c86e Assignment 1 -DigitalClock
+* 76e1518 Arrays , objects , and assignment 2 - taking password from user then matching
+* b5e0793 Initial boiler plate project
+
+
+========== COMMIT DETAILS ==========
+commit 7fbedb169d1086586147d85f97cc686d0df203c3
+Merge: d8775ba e2cd8a7
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Wed Nov 18 14:54:08 2026 +0530
+
+    Merge branch 'main' of https://github.com/raghavendrashivam474/IdeaProjects
+
+commit d8775bac21cc83e81f8ca91d5a89e6cec5e53cd9
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Wed Nov 18 14:50:34 2026 +0530
+
+    Inheritance application basics
+
+ Intro/src/main/java/Inheritance.java | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit e2cd8a7409b164a09affca9c1268a8e4f710f5df
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Wed Nov 18 14:13:39 2026 +0530
+
+    Add README for IdeaProjects
+
+ README.md | 54 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 54 insertions(+)
+
+commit 6477759f31c16b3415065ea733ee7749ae9e39f3
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Wed Nov 18 14:05:53 2026 +0530
+
+    Initializing countdown timer
+
+ JavaCountdownTimer/.gitignore                      | 39 ++++++++++++
+ JavaCountdownTimer/.idea/.gitignore                | 12 ++++
+ JavaCountdownTimer/.idea/encodings.xml             |  7 +++
+ JavaCountdownTimer/.idea/misc.xml                  | 15 +++++
+ JavaCountdownTimer/.idea/vcs.xml                   |  6 ++
+ JavaCountdownTimer/pom.xml                         | 17 +++++
+ .../src/main/java/org/example/Main.java            | 73 ++++++++++++++++++++++
+ 7 files changed, 169 insertions(+)
+
+commit 69773704356be0cacfcc434352cc4d3a16ec1216
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Tue Nov 17 10:26:00 2026 +0530
+
+    Recursion intro and a simple program of finding sum upto n natural numbers
+
+ Intro/src/main/java/Recursion.java | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+commit 8ee4cf2930625e0dc57a5cfa28578b89385687cd
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Tue Nov 17 10:11:03 2026 +0530
+
+    Methods , declaration and calling then method overloading
+
+ Intro/src/main/java/Methods.java | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit b44c86e66b6c986c45201f0a245103d4a65b581f
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Tue Nov 17 09:50:20 2026 +0530
+
+    Assignment 1 -DigitalClock
+
+ Intro/src/main/java/DigitalClock.java | 42 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit 76e1518c72e656e1211e0eb6e1c728bbbe5ae77b
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Tue Nov 17 09:42:25 2026 +0530
+
+    Arrays , objects , and assignment 2 - taking password from user then matching
+
+ Intro/.gitignore                          | 39 +++++++++++++++++++++++++++++++
+ Intro/.idea/.gitignore                    | 12 ++++++++++
+ Intro/.idea/encodings.xml                 |  7 ++++++
+ Intro/.idea/misc.xml                      | 14 +++++++++++
+ Intro/.idea/vcs.xml                       |  6 +++++
+ Intro/pom.xml                             | 17 ++++++++++++++
+ Intro/src/main/java/Abes.java             | 19 +++++++++++++++
+ Intro/src/main/java/Assignment2.java      | 16 +++++++++++++
+ Intro/src/main/java/Raghav.java           |  5 ++++
+ Intro/src/main/java/org/example/Main.java | 17 ++++++++++++++
+ 10 files changed, 152 insertions(+)
+
+commit b5e07936383b59915f0b07988f79fb4c1c16e24a
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Tue Nov 17 09:41:01 2026 +0530
+
+    Initial boiler plate project
+
+ IdeaHome/.idea/.gitignore | 12 ++++++++++++
+ IdeaHome/.idea/.name      |  1 +
+ IdeaHome/.idea/misc.xml   |  6 ++++++
+ 3 files changed, 19 insertions(+)
+
+
+========== LATEST COMMIT ==========
+commit 7fbedb169d1086586147d85f97cc686d0df203c3
+Merge: d8775ba e2cd8a7
+Author: Raghavendra Singh <raghavendrashivam474@gmail.com>
+Date:   Wed Nov 18 14:54:08 2026 +0530
+
+    Merge branch 'main' of https://github.com/raghavendrashivam474/IdeaProjects
+
+ README.md | 54 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 54 insertions(+)
+
+
+========== LOCAL VS REMOTE ==========
+diff --git a/Intro/src/main/java/Inheritance.java b/Intro/src/main/java/Inheritance.java
+deleted file mode 100644
+index 1346341..0000000
+--- a/Intro/src/main/java/Inheritance.java
++++ /dev/null
+@@ -1,21 +0,0 @@
+-class inherit{
+-    int a = 10;
+-    void display(){
+-        System.out.println(a);
+-    }
+-}
+-class inhertit extends inherit{
+-    int b=5;
+-    void disp(){
+-        System.out.println(b);
+-    }
+-}
+-public class Inheritance extends inhertit  {
+-
+-        public static void main(String[] args){
+-            Inheritance i = new Inheritance();
+-            System.out.println(i.a);
+-            i.display();
+-            i.disp();
+-        }
+-}
+
+
+========== STAGED CHANGES ==========
+
+
+========== UNSTAGED CHANGES ==========
+
+
+========== TRACKED FILES ==========
+.gitignore
+.idea/.gitignore
+.idea/encodings.xml
+.idea/misc.xml
+.idea/vcs.xml
+pom.xml
+src/main/java/Abes.java
+src/main/java/Assignment2.java
+src/main/java/DigitalClock.java
+src/main/java/Inheritance.java
+src/main/java/Methods.java
+src/main/java/Raghav.java
+src/main/java/Recursion.java
+src/main/java/org/example/Main.java
+
+
+========== UNTRACKED FILES ==========
+repository-inspection.txt
+src/main/java/HybridInheritance.java
+src/main/java/abes1.java
+
+
+========== PROJECT STRUCTURE ==========
+Folder PATH listing for volume OS
+Volume serial number is D816-2E6A
+C:.
+ª   .gitignore
+ª   pom.xml
+ª   repository-inspection.txt
+ª   
++---.idea
+ª       .gitignore
+ª       compiler.xml
+ª       encodings.xml
+ª       jarRepositories.xml
+ª       misc.xml
+ª       vcs.xml
+ª       workspace.xml
+ª       
++---.mvn
++---src
+ª   +---main
+ª   ª   +---java
+ª   ª   ª   ª   Abes.java
+ª   ª   ª   ª   abes1.java
+ª   ª   ª   ª   Assignment2.java
+ª   ª   ª   ª   DigitalClock.java
+ª   ª   ª   ª   HybridInheritance.java
+ª   ª   ª   ª   Inheritance.java
+ª   ª   ª   ª   Methods.java
+ª   ª   ª   ª   Raghav.java
+ª   ª   ª   ª   Recursion.java
+ª   ª   ª   ª   
+ª   ª   ª   +---org
+ª   ª   ª       +---example
+ª   ª   ª               Main.java
+ª   ª   ª               
+ª   ª   +---resources
+ª   +---test
+ª       +---java
++---target
+    +---classes
+    ª   ª   A.class
+    ª   ª   Abes.class
+    ª   ª   abes1.class
+    ª   ª   animal.class
+    ª   ª   Assignment2.class
+    ª   ª   B.class
+    ª   ª   DigitalClock.class
+    ª   ª   dog.class
+    ª   ª   HybridInheritance.class
+    ª   ª   inherit.class
+    ª   ª   Inheritance.class
+    ª   ª   inhertit.class
+    ª   ª   Methods.class
+    ª   ª   Raghav.class
+    ª   ª   Recursion.class
+    ª   ª   
+    ª   +---org
+    ª       +---example
+    ª               Main.class
+    ª               
+    +---generated-sources
+        +---annotations
+
+
+========== BRANCH INFORMATION ==========
+* main                7fbedb1 [origin/main: ahead 2] Merge branch 'main' of https://github.com/raghavendrashivam474/IdeaProjects
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main e2cd8a7 Add README for IdeaProjects
+
+
+========== REMOTE INFORMATION ==========
+origin	https://github.com/raghavendrashivam474/IdeaProjects.git (fetch)
+origin	https://github.com/raghavendrashivam474/IdeaProjects.git (push)
+
+
+========== INSPECTION COMPLETE ==========
