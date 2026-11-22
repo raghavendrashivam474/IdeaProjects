@@ -165,8 +165,8 @@ public class TimerView {
         JOptionPane.showMessageDialog(frame, message, title, messageType);
     }
 
-    public void playBeep() {
-        Toolkit.getDefaultToolkit().beep();
+    public void playAlarm() {
+        org.example.util.SoundPlayer.playAlarmSound();
     }
 
     // --- Input Getters ---

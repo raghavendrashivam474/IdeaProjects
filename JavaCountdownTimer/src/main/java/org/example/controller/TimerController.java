@@ -52,7 +52,7 @@ public class TimerController {
 
         if (isFinished) {
             swingTimer.stop();
-            view.playBeep();
+            view.playAlarm(); // Triggers the modern audio chime
             view.showDialog("⏰ Time's Up!", "Countdown Finished", JOptionPane.INFORMATION_MESSAGE);
             view.setInputsEnabled(true);
             view.setButtonStates(true, false, "Pause");
