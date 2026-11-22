@@ -66,6 +66,10 @@ public class TimerModel {
     }
 
     // Queries & Getters
+    public State getCurrentState() {
+        return currentState;
+    }
+
     public boolean isRunning() {
         return currentState == State.RUNNING;
     }
@@ -97,7 +101,7 @@ public class TimerModel {
     }
 
     /**
-     * Helper to format any seconds amount into HH:MM:SS.
+     * Helper to format remaining seconds into HH:MM:SS.
      */
     public String getFormattedRemainingTime() {
         int hours = remainingSeconds / 3600;
