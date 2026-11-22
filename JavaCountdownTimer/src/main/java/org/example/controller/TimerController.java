@@ -17,7 +17,7 @@ public class TimerController {
         this.model = model;
         this.view = view;
 
-        // Initialize 1-second background tick
+        // 1-second countdown engine
         this.swingTimer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -25,10 +25,25 @@ public class TimerController {
             }
         });
 
-        // Attach event listeners to the view
+        // Action listeners
         this.view.addStartListener(e -> handleStart());
         this.view.addPauseListener(e -> handlePauseResume());
         this.view.addResetListener(e -> handleReset());
+
+        // Preset chip listeners
+        this.view.addPreset5Listener(e -> applyPreset(5));
+        this.view.addPreset15Listener(e -> applyPreset(15));
+        this.view.addPreset25Listener(e -> applyPreset(25));
+    }
+
+    private void applyPreset(int minutes) {
+        swingTimer.stop();
+        model.setTime(0, minutes, 0);
+
+        view.setInputs("0", String.valueOf(minutes), "0");
+        view.updateDisplay(model.getFormattedRemainingTime(), 100);
+        view.setInputsEnabled(true);
+        view.setButtonStates(true, false, "Pause");
     }
 
     private void handleTick() {

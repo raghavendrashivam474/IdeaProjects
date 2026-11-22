@@ -17,6 +17,11 @@ public class TimerView {
     private JButton btnPause;
     private JButton btnReset;
 
+    // Preset Buttons
+    private JButton btnPreset5;
+    private JButton btnPreset15;
+    private JButton btnPreset25;
+
     public TimerView() {
         initUI();
     }
@@ -25,8 +30,8 @@ public class TimerView {
         // --- Frame Setup ---
         frame = new JFrame("Countdown Timer");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 520);
-        frame.setMinimumSize(new Dimension(500, 450));
+        frame.setSize(600, 560);
+        frame.setMinimumSize(new Dimension(500, 480));
         frame.setLocationRelativeTo(null);
         frame.getContentPane().setBackground(new Color(15, 23, 42)); // Slate Dark
         frame.setLayout(new GridBagLayout()); // Keeps Card Centered
@@ -46,14 +51,26 @@ public class TimerView {
         };
         card.setOpaque(false);
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
-        card.setBorder(new EmptyBorder(30, 40, 30, 40));
-        card.setPreferredSize(new Dimension(440, 380));
+        card.setBorder(new EmptyBorder(25, 40, 25, 40));
+        card.setPreferredSize(new Dimension(440, 420));
 
         // --- Header Title ---
         JLabel titleLabel = new JLabel("COUNTDOWN TIMER");
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
         titleLabel.setForeground(new Color(148, 163, 184));
+
+        // --- Preset Chips Panel ---
+        JPanel presetPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 8, 0));
+        presetPanel.setOpaque(false);
+
+        btnPreset5 = createPresetButton("5m Break");
+        btnPreset15 = createPresetButton("15m Break");
+        btnPreset25 = createPresetButton("25m Pomodoro");
+
+        presetPanel.add(btnPreset5);
+        presetPanel.add(btnPreset15);
+        presetPanel.add(btnPreset25);
 
         // --- Input Fields ---
         JPanel inputPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 8, 0));
@@ -87,30 +104,32 @@ public class TimerView {
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 14, 0));
         buttonPanel.setOpaque(false);
 
-        btnStart = createStyledButton("Start", new Color(34, 197, 94));
-        btnPause = createStyledButton("Pause", new Color(245, 158, 11));
-        btnReset = createStyledButton("Reset", new Color(239, 68, 68));
+        btnStart = createActionButton("Start", new Color(34, 197, 94));
+        btnPause = createActionButton("Pause", new Color(245, 158, 11));
+        btnReset = createActionButton("Reset", new Color(239, 68, 68));
         btnPause.setEnabled(false);
 
         buttonPanel.add(btnStart);
         buttonPanel.add(btnPause);
         buttonPanel.add(btnReset);
 
-        // Assemble Card
+        // Assemble Card Components
         card.add(titleLabel);
-        card.add(Box.createVerticalStrut(20));
+        card.add(Box.createVerticalStrut(14));
+        card.add(presetPanel);
+        card.add(Box.createVerticalStrut(16));
         card.add(inputPanel);
-        card.add(Box.createVerticalStrut(25));
+        card.add(Box.createVerticalStrut(20));
         card.add(timeDisplay);
-        card.add(Box.createVerticalStrut(15));
+        card.add(Box.createVerticalStrut(12));
         card.add(progressBar);
-        card.add(Box.createVerticalStrut(25));
+        card.add(Box.createVerticalStrut(20));
         card.add(buttonPanel);
 
         frame.add(card);
     }
 
-    // --- UI Mutation Methods (Called by Controller) ---
+    // --- UI Mutation Methods ---
 
     public void setVisible(boolean visible) {
         frame.setVisible(visible);
@@ -131,6 +150,9 @@ public class TimerView {
         txtHours.setEnabled(enabled);
         txtMinutes.setEnabled(enabled);
         txtSeconds.setEnabled(enabled);
+        btnPreset5.setEnabled(enabled);
+        btnPreset15.setEnabled(enabled);
+        btnPreset25.setEnabled(enabled);
     }
 
     public void setButtonStates(boolean startEnabled, boolean pauseEnabled, String pauseText) {
@@ -161,7 +183,7 @@ public class TimerView {
         return txtSeconds.getText().trim();
     }
 
-    // --- Listener Attachment Hooks ---
+    // --- Listener Hooks ---
 
     public void addStartListener(ActionListener listener) {
         btnStart.addActionListener(listener);
@@ -175,7 +197,32 @@ public class TimerView {
         btnReset.addActionListener(listener);
     }
 
+    public void addPreset5Listener(ActionListener listener) {
+        btnPreset5.addActionListener(listener);
+    }
+
+    public void addPreset15Listener(ActionListener listener) {
+        btnPreset15.addActionListener(listener);
+    }
+
+    public void addPreset25Listener(ActionListener listener) {
+        btnPreset25.addActionListener(listener);
+    }
+
     // --- Styling Helpers ---
+
+    private JButton createPresetButton(String text) {
+        JButton btn = new JButton(text);
+        btn.setFont(new Font("Segoe UI", Font.BOLD, 11));
+        btn.setForeground(new Color(203, 213, 225));
+        btn.setBackground(new Color(51, 65, 85));
+        btn.setFocusPainted(false);
+        btn.setBorderPainted(false);
+        btn.setOpaque(true);
+        btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        btn.setPreferredSize(new Dimension(105, 26));
+        return btn;
+    }
 
     private JPanel createInputBlock(String labelText, JTextField field) {
         JPanel block = new JPanel();
@@ -186,6 +233,7 @@ public class TimerView {
         label.setFont(new Font("Segoe UI", Font.BOLD, 10));
         label.setForeground(new Color(148, 163, 184));
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         field.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         block.add(field);
@@ -208,7 +256,7 @@ public class TimerView {
         return tf;
     }
 
-    private JButton createStyledButton(String text, Color bg) {
+    private JButton createActionButton(String text, Color bg) {
         JButton btn = new JButton(text);
         btn.setFont(new Font("Segoe UI", Font.BOLD, 13));
         btn.setForeground(Color.WHITE);
